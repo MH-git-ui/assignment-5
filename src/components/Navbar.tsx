@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from "../assets/logo-text.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -18,7 +19,6 @@ function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-container">
-
         {/* Mobile Hamburger */}
         <button
           className="hamburger"
@@ -39,17 +39,20 @@ function Navbar() {
           onClick={closeMenu}
           aria-label="Dev Stack home"
         >
-          <div className="brand-logo">
-            <span>&lt;/&gt;</span>
-          </div>
-
-          <span className="brand-name">Dev Stack</span>
+          <img
+            src={logo}
+            alt="Dev Stack"
+            className="navbar-logo-image"
+          />
         </a>
 
         {/* Desktop Navigation */}
         <nav className="desktop-nav" aria-label="Main navigation">
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href}>
+            <a
+              key={link.label}
+              href={link.href}
+            >
               {link.label}
             </a>
           ))}
@@ -57,11 +60,17 @@ function Navbar() {
 
         {/* Auth Buttons */}
         <div className="navbar-actions">
-          <button className="signin-button" type="button">
+          <button
+            className="signin-button"
+            type="button"
+          >
             Sign In
           </button>
 
-          <button className="signup-button" type="button">
+          <button
+            className="signup-button"
+            type="button"
+          >
             Sign Up
           </button>
         </div>
@@ -69,7 +78,9 @@ function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       <nav
-        className={`mobile-menu ${menuOpen ? "mobile-menu-open" : ""}`}
+        className={`mobile-menu ${
+          menuOpen ? "mobile-menu-open" : ""
+        }`}
         aria-label="Mobile navigation"
       >
         {navLinks.map((link) => (
