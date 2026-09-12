@@ -16,7 +16,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
-  // Fetch the technology catalog from the local JSON file on mount.
+  
   useEffect(() => {
     let isMounted = true
 
