@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-import type { Technology } from './types/Technology'
+import type { Technology } from './type/Technology'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import TechnologyGrid from './components/Technology_Grid'
